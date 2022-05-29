@@ -15,8 +15,6 @@
 1. 下载证书
 点击 ProxyLab 左侧的 `快速开始`，在打开页面里可以看到一个二维码，通过微信扫描获得证书下载链接，然后选择用系统自带的浏览器打开链接（iOS 下系统自带的浏览器是 safari, Android 需要自己判断），会自动下载证书.
 
-![](/docs/assets/images/qrcode-of-cert.png)
-
 2. 安装并信任证书
 * 系统自带的浏览器打开证书链接后会自动下载、进入安装界面。
 * Android 种类繁多，安装和信任证书没有统一的步骤，请按照界面提示操作。
@@ -25,3 +23,5 @@
 ** 注：iOS 10.3以上的系统在安装根证书后，需要进入Settings > General > About > Certificate Trust Testings 里面进行证书信任，新安装的根证书才生效。信任界面如下图：
 
 <img src="https://img.yzcdn.cn/public_files/2018/04/18/5ee4efa065596389eda0b5443ce63767.png" width="300" />
+
+## 
