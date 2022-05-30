@@ -43,15 +43,13 @@ SwitchyOmega，请查看 [chrome 代理设置指南](usage/chrome.md)
 
 ### 1. 安装 ProxyLab 根证书
 
-如果你用是 Mac，第一次打开 ProxyLab 的时候，会让你输入系统密码，之后会默认帮你安装证书，你就可以直接移步下面的第 2
-步去信任该证书了
+* 如果你用是 Mac，第一次打开 ProxyLab 的时候，会让你输入系统密码，之后会默认帮你安装证书，你就可以直接移步下面的第 2 步去信任该证书了
 
 <img src="https://i.miaolu.com/proxylab/auto%20install%20cert.jpg" alt="" />
 
-如果用的是其他电脑或发现证书并没有安装：<a :href="crtUrl">下载</a>证书文件，<a
-href="https://github.com/allwith-io/ProxyLab/blob/master/docs/zh/install/root-ca.md" target="_blank">并在本地安装</a>
+* 如果用的是其他电脑或发现证书并没有安装，请点击 ProxyLab 左侧 `快速开始`，打开管理后台的快速开始页面，里面可以找到证书下载地址
 
-如果你用的是手机：请扫码在手机里安装证书 <img class="qrcode" :src="imgUrl" />
+* 如果你用的是手机，也可以在上面提到的也没里找到二维码，手机扫码并有浏览器打开即可
 
 ### 2. 信任 ProxyLab 根证书
 Mac: 打开软件 <span>Keychain Access</span>，搜索找到 ProxyLab 证书，双击，按下图所示操作
