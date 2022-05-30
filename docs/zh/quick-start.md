@@ -4,13 +4,7 @@
 
 您需要在浏览器里安装可以设置代理的插件，然后在里面设置 ProxyLab 所在的电脑的 IP 及 ProxyLab
 的端口。这样浏览器的请求就会发送到 ProxyLab，由 ProxyLab 处理并转发。
-
-
-如果是手机连接 ProxyLab，直接在手机
-<a
-target="_blank"
-href="https://github.com/allwith-io/ProxyLab/blob/master/docs/zh/usage/mobile.md">修改网络设置即可</a>。
-
+如果是手机连接 ProxyLab，直接在手机[修改网络设置即可](setting/chrome.md)
 
 ## 二、安装 chrome 插件
 
@@ -33,7 +27,7 @@ target="_blank">这里 </a>。
 ## 二、配置插件
 
 安装完插件后请设置插件代理地址为 127.0.0.1，代理协议: http，端口为 ProxyLab 代理端口(默认8001)。 如不清楚如何配置
-SwitchyOmega，请查看 [chrome 代理设置指南](usage/chrome.md)
+SwitchyOmega，请查看 [chrome 代理设置指南](setting/chrome.md)
 
 
 ## 三、安装根证书
