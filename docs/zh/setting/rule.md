@@ -40,20 +40,29 @@ URL特征为该请求是否被 ProxyLab 所转发的主要判定方式。其判�
 
 ## 进阶
 
+### 域名替换
 在使用正则写URL特征时，ProxyLab 支持在处理类型的转发中写 $ 占位符，用于替换为正则匹配后第N个获取组。
 
-### 示例
+上面的图片中例子，会把所有 mytest.com 及 mytest.com/xxxx 都转变成访问 http://localhost, 这显然不是大部分情况下想要的。所以需要使用正则：
 
-请求url为：https://b.yzcdn.cn/v2/build/wap/showcase/sku_58590c11af.js  
+比如，如果你需要将所有 www.mytest.com 域名替换为 127.0.0.1:8000
+1. 那么URL特征填：www\.mytest\.com(.*)
+2. 下面转发请求填：http://127.0.0.1:8080$1
+
+安装正则的规则，$1 对应上面第一个括号匹配的内容，一次类推，如果URL特征是： www\.mytest\.com(.*)\/(.*).html ,那么 &2 对应第二个括号匹配的内容
+
+### URL 路径替换
+
+请求url为：https://a.cdn.com/v2/build/wap/showcase/sku_58590c11af.js  
 要拦截的请求的url特征为：build/wap/(.*?)_[^_]*$  
 请求转发路径为：<%=wapproject%>/js/$1/main.js。  
-则最终请求路径中的$1将被替换为showcase/sku
+则最终请求路径中的$1将被替换为 showcase/sku
 
 ### 过滤请求参数
 
 在使用正则写URL特征时，ProxyLab 在处理时会对完整的请求路径**包括请求参数**进行处理。
 
-请求url为：https://b.yzcdn.cn/v2/build/wap/showcase/sku_58590c11af.js?date=12345
+请求url为：https://a.cdn.com/v2/build/wap/showcase/sku_58590c11af.js?date=12345
 
 要拦截的请求的url特征为：build/wap/(.*)
 
@@ -61,5 +70,9 @@ URL特征为该请求是否被 ProxyLab 所转发的主要判定方式。其判�
 
 则最终实际的转发路径会是：/my/project/js/showcase/sku_58590c11af.js?date=12345
 
-如需过滤后面的请求参数，请使用正则进行过滤。上述例子可以把url特征改为：`build/wap/(.*)(?:\?.*)`,
-这样实际的转发路径就会变成`/my/project/js/showcase/sku_58590c11af.js`，不再包含请求参数。
+如需你不需要后面的请求参数，请使用正则进行过滤。
+
+1. 把URL特征改为：`build/wap/(.*)(?:\?.*)` —— 等于把后面参数部分包到第二个括号里去匹配了,
+2. 请求转发依旧是：/my/project/js/$1
+
+这样实际的转发路径就会变成 `/my/project/js/showcase/sku_58590c11af.js`，不再包含后面的请求参数。
