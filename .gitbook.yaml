@@ -1,7 +1,7 @@
 root: ./docs/zh
 
 ​structure:  
-    readme: README.md  
+    readme: quick-start.md  
     summary: SUMMARY.md​
 
 redirects:  
