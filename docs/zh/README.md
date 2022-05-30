@@ -1,4 +1,4 @@
-## ProxyLab 中文文档
+## ProxyLab 文档
 
 * [快速开始](quick-start.md)
 * [安装](install)
