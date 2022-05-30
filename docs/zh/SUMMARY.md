@@ -27,3 +27,4 @@
 ## 团队协作
 
 * [远程规则](team/remote-rule.md)
+* [远程 Host](team/remote-host.md)
