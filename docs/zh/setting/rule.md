@@ -18,7 +18,7 @@ ProxyLab 中一个规则集可对应多个规则，每个规则集和每个规�
 
 ### 规则编辑
 
-<img src="https://img.yzcdn.cn/public_files/2018/03/30/4e6849fa6536d5c067e7dfb8fe732c6b.png" />
+![](https://img.yzcdn.cn/public_files/2018/03/30/4e6849fa6536d5c067e7dfb8fe732c6b.png)
 其中，URL 特征字段可以是简单的 URL 字符串片段，也可以是正则表达式
 
 #### URL 特征配置项详解
