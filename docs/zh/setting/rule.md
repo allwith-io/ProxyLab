@@ -14,11 +14,13 @@
 
 ### 规则配置
 ProxyLab 中一个规则集可对应多个规则，每个规则集和每个规则都可单独配置是否生效。(如a规则在A规则集下，当A规则不生效时，无论a规则是否被勾选，都不生效)。
+
 <img src="https://img.yzcdn.cn/public_files/2018/03/30/3a7f3c2c682180c496f2e748cf05851e.png" />
 
 ### 规则编辑
 
 ![](https://img.yzcdn.cn/public_files/2018/03/30/4e6849fa6536d5c067e7dfb8fe732c6b.png)
+
 其中，URL 特征字段可以是简单的 URL 字符串片段，也可以是正则表达式
 
 #### URL 特征配置项详解
